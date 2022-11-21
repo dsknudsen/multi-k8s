@@ -21,7 +21,7 @@ before_install:
   - gcloud config set compute/zone us-west1-a
   - gcloud container clusters get-credentials multi-cluster
   - echo "$DOCKER_PWD" | docker login -u "$DOCKER_ID" --password-stdin
-  #build testing image
+  #build testing image - trying again
   - docker build -t dsknudsen/react-test -f ./client/Dockerfile.dev ./client
 
 scripts:
